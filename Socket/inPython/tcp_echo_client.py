@@ -13,7 +13,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as clientSocket :
         clientSocket.sendall(bytes(sendMsg, 'utf-8'))
 
         recvData = clientSocket.recv(1024)
-        print("> received:". recvData.decode('utf-8'))
+        print("> received:", recvData.decode('utf-8'))
 
         if sendMsg == "quit" :
             break
